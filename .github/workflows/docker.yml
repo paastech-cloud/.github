@@ -29,7 +29,7 @@ jobs:
           images: |
             ghcr.io/paastech-cloud/${{ inputs.image_name }}
           tags: |
-            type=sha
+            type=semver,pattern={{version}}
             latest
 
       - name: Login to github container registry
