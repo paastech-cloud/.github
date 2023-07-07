@@ -15,6 +15,9 @@ on:
 jobs:
   build-and-push-app:
     runs-on: ubuntu-22.04
+    permissions:
+      packages: write
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v3
